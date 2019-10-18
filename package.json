@@ -5,9 +5,7 @@
   "main": "ask-delivery.js",
   "scripts": {
     "create": "claudia create --region eu-central-1 --api-module api",
-    "update": "claudia --cache-api-config apiConfig",
-    "package": "aws cloudformation package --template-file template.yaml --s3-bucket some-like-it-hot-book --output-template-file output.yaml",
-    "deploy": "aws cloudformation deploy --template-file output.yaml --stack-name some-like-it-hot-book --capabilities CAPABILITY_IAM"
+    "update": "claudia --cache-api-config apiConfig"
   },
   "keywords": [],
   "author": "",
