@@ -2,15 +2,23 @@
   "name": "some-like-it-hot",
   "version": "1.0.0",
   "description": "",
-  "main": "ask-delivery.js",
+  "main": "api.js",
   "scripts": {
-    "package": "aws cloudformation package --template-file template.yaml --s3-bucket some-like-it-hot-book --output-template-file output.yaml",
-    "deploy": "aws cloudformation deploy --template-file output.yaml --stack-name some-like-it-hot-book --capabilities CAPABILITY_IAM"
+    "create": "claudia create --region eu-central-1 --api-module api",
+    "update": "claudia update --cache-api-config apiConfig"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "minimal-request-promise": "^1.5.0"
+    "claudia-api-builder": "^4.1.2",
+    "minimal-request-promise": "^1.5.0",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "claudia": "^5.9.0"
+  },
+  "optionalDependencies": {
+    "aws-sdk": "^2.552.0"
   }
 }
