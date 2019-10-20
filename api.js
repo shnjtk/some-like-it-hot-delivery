@@ -16,7 +16,14 @@ api.post('/delivery', request => {
 
 api.get('/delivery', request => {
   // TODO: authentication
-  return getDeliveries(request.body);
+  return getDeliveries(request);
+}, {
+  error: 400,
+});
+
+api.get('/delivery/{id}', request => {
+  // TODO: authentication
+  return getDeliveries(request);
 }, {
   error: 400,
 });
